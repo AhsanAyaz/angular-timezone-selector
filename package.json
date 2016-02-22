@@ -18,9 +18,9 @@
   "author": "Ahsan Ayaz <ahsan.ubitian@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mishguruorg/angular-country-selector/issues"
+    "url": "https://github.com/AhsanAyaz/angular-timezone-selector-ext/issues"
   },
-  "homepage": "https://github.com/mishguruorg/angular-timezone-selector",
+  "homepage": "https://github.com/AhsanAyaz/angular-timezone-selector-ext",
   "devDependencies": {
     "csv": "^0.4.1",
     "csv-load-sync": "1.0.0",

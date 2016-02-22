@@ -15,6 +15,8 @@
  * Date:    02/22/2016
  * License: MIT
  */
+
+
 var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
   reIsPlainProp = /^\w*$/,
   rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]/g;
@@ -22,7 +24,7 @@ var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
 /** Used to match backslashes in property paths. */
 var reEscapeChar = /\\(\\)?/g;
 
-
+/** This helper object works as a replacement of the dependency over lodash library **/
 var helper = {
   get : function(object, path, defaultValue) {
     var result = object == null ? undefined : helper.baseGet(object, path);
@@ -43,12 +45,12 @@ var helper = {
     if (typeof value == 'number') {
       return true;
     }
-    return !isArray(value) &&
+    return !angular.isArray(value) &&
       (reIsPlainProp.test(value) || !reIsDeepProp.test(value) ||
       (object != null && value in Object(object)));
   },
   baseToPath: function(value) {
-    return isArray(value) ? value : helper.stringToPath(value);
+    return angular.isArray(value) ? value : helper.stringToPath(value);
   },
   stringToPath: function(string) {
     var result = [];
