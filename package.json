@@ -2,7 +2,7 @@
   "name": "angular-timezone-selector-ext",
   "version": "1.2.2",
   "description": "AngularJS timezone selector extended",
-  "main": "dist/angular-timezone-selector.min.js",
+  "main": "dist/angular-timezone-selector-ext.min.js",
   "scripts": {
     "test": "./node_modules/.bin/standard"
   },
